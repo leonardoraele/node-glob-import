@@ -1,0 +1,36 @@
+{
+	"name": "node-glob-loader",
+	"description": "Allows you to load several files with a single import statement using a glob pattern.",
+	"version": "0.1.0",
+	"author": "Leonardo Raele <leonardoraele@gmail.com>",
+	"license": "MIT",
+	"type": "module",
+	"files": ["dist"],
+	"engines": {
+		"node": ">=20.8.0 | >=18.9.0"
+	},
+	"exports": {
+		".": {
+			"ts": "./src/preload.ts",
+			"default": "./dist/src/preload.js"
+		},
+		"./register": {
+			"ts": "./src/register.ts",
+			"default": "./dist/src/register.js"
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"prebuild": "rimraf dist",
+		"prepublish": "npm run build",
+		"test": "npm run test:unit && npm run test:types",
+		"test:unit": "node --import=tsx --import=./src/preload.ts --test test/**/*.test.ts",
+		"test:types": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.6",
+		"rimraf": "^6.0.1",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.3"
+	}
+}
