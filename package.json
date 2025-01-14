@@ -1,5 +1,5 @@
 {
-	"name": "node-glob-loader",
+	"name": "node-glob-import",
 	"description": "Allows you to load several files with a single import statement using a glob pattern.",
 	"version": "0.1.0",
 	"author": "Leonardo Raele <leonardoraele@gmail.com>",
@@ -32,5 +32,13 @@
 		"rimraf": "^6.0.1",
 		"tsx": "^4.19.2",
 		"typescript": "^5.7.3"
-	}
+	},
+	"keywords": [
+		"glob",
+		"loader",
+		"import",
+		"preload",
+		"register",
+		"hooks"
+	]
 }

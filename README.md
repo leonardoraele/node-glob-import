@@ -2,10 +2,10 @@ Import a list of files with a single `import` statement, using glob patterns.
 
 ### Usage
 
-First, you must enable the loader, which you can do by adding the `--import=node-glob-loader` flag to node.
+First, you must enable the loader, which you can do by adding the `--import=node-glob-import` flag to node.
 
 ```bash
-node --import=node-glob-loader myscript.js
+node --import=node-glob-import myscript.js
 ```
 
 Then, you can make glob imports by adding the `type: 'glob'` attribute to the import:
