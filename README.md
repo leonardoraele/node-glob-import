@@ -20,7 +20,7 @@ assert(typeof somemodules === 'object');
 assert('example.js' in somemodules);
 
 // And the value for each key is a function that dynamically loads that file using `import()`.
-const { default: example } = await somemodules['example']();
+const { default: example } = await somemodules['example.js']();
 assert(example.foo === 'bar');
 ```
 ```js
